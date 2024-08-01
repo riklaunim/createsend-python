@@ -1,6 +1,6 @@
 # createsend
 
-A Python library which implements the complete functionality of the [Campaign Monitor API](http://www.campaignmonitor.com/api/). Requires Python 2.7, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9 or 3.10.
+A Python library which implements the complete functionality of the [Campaign Monitor API](http://www.campaignmonitor.com/api/). Requires Python 2.7, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11 or 3.12.
 
 ## Installation
 
@@ -206,7 +206,7 @@ def test_add_with_custom_fields(self):
   self.subscriber.stub_request("subscribers/%s.json" % self.list_id, "add_subscriber.json")
   custom_fields = [ { "Key": 'website', "Value": 'http://example.com/' } ]
   email_address = self.subscriber.add(self.list_id, "subscriber@example.com", "Subscriber", custom_fields, True)
-  self.assertEquals(email_address, "subscriber@example.com")
+  self.assertEqual(email_address, "subscriber@example.com")
 ```
 
 ## Contributing
