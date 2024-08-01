@@ -12,7 +12,6 @@ setup(
     install_requires=[
         'six>=1.10',
     ],
-    test_suite='test',
     packages=find_packages('lib'),
     package_dir={'': 'lib'},
     package_data={'': ['cacert.pem']},
